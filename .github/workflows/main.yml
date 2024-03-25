@@ -28,14 +28,12 @@ jobs:
       - name: Run Python script
         run: python main.py ${{secrets.MUSIC}} ${{secrets.BASIC}} ${{secrets.INFO}} ${{secrets.TELEGRAM}} ${{secrets.CHAT}} # 이곳에 실제 파이썬 파일명을 적어주세요.
 
-      - name: Commit and push changes
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add .
-          git commit -m "Update from Github action"
-          git push https://${{ secrets.GH_TOKEN }}@github.com/harukawa-sora/es-leak.git HEAD:main
-
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          branch: main
+        
         env:
           pythonLocation: /opt/hostedtoolcache/Python/3.11.3/x64
           LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.3/x64/lib
