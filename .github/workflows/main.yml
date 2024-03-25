@@ -23,11 +23,10 @@ jobs:
 
       - name: Install Python dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt ${{secrets.MUSIC}} ${{secrets.BASIC}} ${{secrets.INFO}} ${{secrets.TELEGRAM}} ${{secrets.CHAT}}
+          pip install -r requirements.txt
 
       - name: Run Python script
-        run: python main.py # 이곳에 실제 파이썬 파일명을 적어주세요.
+        run: python main.py ${{secrets.MUSIC}} ${{secrets.BASIC}} ${{secrets.INFO}} ${{secrets.TELEGRAM}} ${{secrets.CHAT}} # 이곳에 실제 파이썬 파일명을 적어주세요.
 
       - name: Commit and push changes
         if: steps.changed-files.outputs.files_changed == 'true'
