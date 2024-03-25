@@ -7,8 +7,6 @@ from Crypto.Util.Padding import pad, unpad
 
 import argparse
 
-# python ./main.py https://support.ensemble-stars.jp/music/wp-json/wp/v2/media https://support.ensemble-stars.jp/basic/wp-json/wp/v2/media https://api.boysb.hekk.org/infos/ 6631644574:AAGr6OSPZT07iTyul99ZcjsOJvdxmC4Ic74 6779226176
-#  python ./mein.py https://support.ensemble-stars.jp/music/wp-json/wp/v2/media https://support.ensemble-stars.jp/basic/wp-json/wp/v2/media 6631644574:AAGr6OSPZT07iTyul99ZcjsOJvdxmC4Ic74 6779226176
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
