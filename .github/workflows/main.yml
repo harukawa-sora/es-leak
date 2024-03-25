@@ -28,12 +28,10 @@ jobs:
       - name: Run Python script
         run: python main.py ${{secrets.MUSIC}} ${{secrets.BASIC}} ${{secrets.INFO}} ${{secrets.TELEGRAM}} ${{secrets.CHAT}} # 이곳에 실제 파이썬 파일명을 적어주세요.
 
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GH_TOKEN }}
-          branch: main
-        
+      # Other steps that change files in the repository
+
+      # Commit all changed files back to the repository
+      - uses: stefanzweifel/git-auto-commit-action@v5
         env:
           pythonLocation: /opt/hostedtoolcache/Python/3.11.3/x64
           LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.3/x64/lib
