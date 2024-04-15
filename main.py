@@ -98,7 +98,7 @@ def get_info(url, last_num, telegram_token, chat_id):
             'ep': 'ts__69hPT84zoMQi3Fzpzx9WhpZhCSZzlp9TkSgfBqsKbqAELOWetxFIoHXPnn29',
             'ua': 'Android',
             'format': 'mpac',
-            'version': '3.0.94',
+            'version': '3.0.97',
             'device': 'Android'}
 
     # print(aes_decrypt(bytes([84,145,25,244,61,108,196,135,253,44,132,132,201,179,61,156,48,22,167,114,58,18,127,223,127,160,232,226,189,122,134,245]), iv, base64.urlsafe_b64decode('VbQYqemRm7hAiAk0dlZZ6QBoB5pdQWmPW_9kzwierZ6VZa2KNGiowVKhlnWPZxuF'.encode('ascii'))))
